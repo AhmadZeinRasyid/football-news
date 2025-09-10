@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-^w4ux_mfjud#muf2g%j(v&%uiswr4p5*5ya8c%^4a%pqzy%gp_
 PRODUCTION = os.getenv('PRODUCTION', 'False').lower() == 'true'
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "ahmad-zein41-footballnews.pbp.cs.ui.ac.id"]
 
 # Application definition
 
@@ -100,7 +100,7 @@ else:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-    
+
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
