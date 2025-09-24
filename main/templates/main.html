@@ -45,7 +45,21 @@
 
   <p>{{ news.content|truncatewords:25 }}...</p>
 
-  <p><a href="{% url 'main:show_news' news.id %}"><button>Read More</button></a></p>
+  <p>
+    <a href="{% url 'main:show_news' news.id %}"><button>Read More</button></a>
+    {% if user.is_authenticated and news.user == user %}
+    <a href="{% url 'main:edit_news' news.pk %}">
+      <button>
+        Edit
+      </button>
+    </a>
+    <a href="{% url 'main:delete_news' news.pk %}">
+      <button>
+        Delete
+      </button>
+    </a>
+    {% endif %}
+  </p>
 </div>
 
 <hr>
